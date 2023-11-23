@@ -115,19 +115,54 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() {
+function uniquifyArray(wordsUnique) {
+  let newArray = [];
+  
+ 
+  if(wordsUnique.length === 0){
+    return null;
+  }else{
+    wordsUnique.forEach((element, index) => findDuplicateWord(element, newArray, index));
+    function findDuplicateWord(element, newArray, index) { 
+      console.log(element);
+      
+       if (element != newArray[index]) {
+        newArray.push(element);
+      } else if(newArray.length === 0){
+        newArray.push(element);
+      
+      } 
+      
+    }
+    console.log(newArray);
+      return newArray;
 
-}
+
+  }
+
+  }
+
 
 
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() {}
+function doesWordExist(wordsFind) {
 
 
+  if(wordsFind.length === 0){
+  return null;
+  }else if(wordsFind.length === 1){
+    return true;
+  }else if(wordsFind.findDuplicateWord){
 
+  }else{
+    return false;
+  }
+
+
+}
 // Iteration #7: Count repetition
 const wordsCount = [
   'machine',
@@ -143,7 +178,12 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() {}
+function howManyTimes(wordsCount) {
+  if(wordsCount.length === 0){
+    return 0;
+  }
+
+}
 
 
 
@@ -171,7 +211,9 @@ const matrix = [
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
 
-function greatestProduct() {}
+function greatestProduct(matrix) {
+  
+}
 
 
 
