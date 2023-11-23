@@ -45,7 +45,7 @@ function sumNumbers(numbers) {
   if(numbers.length === 0){
     return 0;
   }else {
-  numbers.forEach((element) => sum += Number(element)  );
+  numbers.forEach((element) => sum += Number(element));
   if(sum != 0){
     return sum;
   }else{
@@ -66,15 +66,15 @@ function sum() {}
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {
-  let averageArray= [];
-  if(averageNumbers.length === 0){
+function averageNumbers(numbersAvg) {
+  if(numbersAvg.length === 0){
     return null;
   }else{
   let averageLength = numbersAvg.length;
   let average = (sumNumbers(numbersAvg)/(averageLength));
   
   return average ;
+  
   }
 }
 
@@ -83,7 +83,13 @@ function averageNumbers() {
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength() { }
+function averageWordLength(wordsArr) { 
+  if(wordsArr.length === 0){
+    return null;
+  }else{
+  }
+
+}
 
 // Bonus - Iteration #4.1
 function avg() {}
@@ -103,7 +109,9 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() {}
+function uniquifyArray() {
+
+}
 
 
 
