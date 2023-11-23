@@ -87,9 +87,15 @@ function averageWordLength(wordsArr) {
   if(wordsArr.length === 0){
     return null;
   }else{
+      let sumW = 0;
+      wordsArr.forEach((element) => sumW += Number(element.length));
+      if(sumW != 0){
+        return sumW/wordsArr.length;
+      }
+    }
   }
 
-}
+
 
 // Bonus - Iteration #4.1
 function avg() {}
