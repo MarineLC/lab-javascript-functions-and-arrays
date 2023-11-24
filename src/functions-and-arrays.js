@@ -152,17 +152,30 @@ function doesWordExist(wordsFind) {
 
 
   if(wordsFind.length === 0){
-  return null;
+ return null;
   }else if(wordsFind.length === 1){
     return true;
-  }else if(wordsFind.findDuplicateWord){
-
-  }else{
-    return false;
+  }else {
+    for(let i = 0; i < wordsFind.length ; i++){
+      return findDuplicateWord(wordsFind, wordsFind[i]);
+    }
   }
 
-
+  function findDuplicateWord(wordsFind, word){
+    let boolean = false;
+    for(let j = 0; j < wordsFind.length; j++){
+        if(wordsFind[j] === word){
+          boolean =  true;
+          break;
+        }else {
+          boolean =  false;
+        }
+    }
+    return boolean;
 }
+}
+
+
 // Iteration #7: Count repetition
 const wordsCount = [
   'machine',
@@ -179,10 +192,30 @@ const wordsCount = [
 ];
 
 function howManyTimes(wordsCount) {
+  let result = 0;
   if(wordsCount.length === 0){
     return 0;
+  }else{
+  for(let i = 0; i < wordsCount.length; i ++){
+    if(countWords(wordsCount , wordsCount[i]) === 1){
+      result = 1;
+    } 
+     if(countWords(wordsCount , wordsCount[i]) === 5){
+      result = 5;
+    }
   }
-
+  return result;
+}
+  function countWords(wordsCount, word){
+    let count = 0;
+    for(let j = 0; j < wordsCount.length; j++){
+        if(wordsCount[j] === word){
+          count++;
+        }
+    }
+    console.log(count);
+    return count;
+}
 }
 
 
